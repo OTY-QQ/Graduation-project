@@ -6,7 +6,21 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3af8024-deb0-483c-8fd9-ceb0228e0285" name="Default Changelist" comment="" />
+    <list default="true" id="e3af8024-deb0-483c-8fd9-ceb0228e0285" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/毕业设计.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-parent/HS-dao/target/classes/META-INF/HS-dao.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-parent/HS-manager/target/HS-manager/WEB-INF/lib/HS-dao-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common-parent/HS-manager/target/HS-manager/WEB-INF/lib/HS-dao-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-parent/HS-manager/target/HS-manager/WEB-INF/lib/HS-dto-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common-parent/HS-manager/target/HS-manager/WEB-INF/lib/HS-dto-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-parent/HS-manager/target/HS-manager/WEB-INF/lib/HS-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common-parent/HS-manager/target/HS-manager/WEB-INF/lib/HS-model-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-parent/HS-manager/target/HS-manager/WEB-INF/lib/HS-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common-parent/HS-manager/target/HS-manager/WEB-INF/lib/HS-service-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-parent/HS-model/target/classes/META-INF/HS-model.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-parent/HS-service/target/classes/META-INF/HS-service.kotlin_module" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/common-parent/target/" />
     <ignored path="$PROJECT_DIR$/common-parent/HS-model/target/" />
@@ -32,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/common-parent/HS-model/src/main/java/com/gdou/HotelSystem/Base/Base.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            <state relative-caret-position="28">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,6 +71,9 @@
       <find>dao.entity.User</find>
       <find>L</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -148,11 +165,13 @@
     <option name="width" value="1689" />
     <option name="height" value="1095" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -406,15 +425,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../智能教室代码/smartclassroom_api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -553,17 +572,18 @@
       <workItem from="1576649149088" duration="14330000" />
       <workItem from="1576671213463" duration="1105000" />
       <workItem from="1576715594864" duration="9716000" />
+      <workItem from="1576744408362" duration="239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56795000" />
+    <option name="totallyTimeSpent" value="57034000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49666667" visible="true" weight="0.2185501" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49666667" visible="true" weight="0.22068231" />
       <window_info id="Structure" order="1" sideWeight="0.50333333" side_tool="true" weight="0.20362474" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -573,7 +593,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.46478873" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.8524946" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.25135428" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -795,16 +815,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-parent/HS-service/src/main/java/com/gdou/HotelSystem/IService/Base/Base.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" selection-start-line="9" selection-end-line="10" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/common-parent/HS-service/src/main/java/com/gdou/HotelSystem/IService/Base/Base.java" />
     <entry file="file://$PROJECT_DIR$/common-parent/HS-dto/src/main/java/com/gdou/HotelSystem/UserResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
@@ -912,13 +923,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common-parent/HS-service/src/main/java/com/gdou/HotelSystem/ServiceImpl/Base/Base.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/common-parent/HS-service/src/main/java/com/gdou/HotelSystem/ServiceImpl/Base/Base.java" />
     <entry file="file://$PROJECT_DIR$/common-parent/HS-service/src/main/java/com/gdou/HotelSystem/IService/Base/IBaseService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1034,8 +1039,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/common-parent/HS-model/src/main/java/com/gdou/HotelSystem/Base/Base.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="11" column="19" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state relative-caret-position="28">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

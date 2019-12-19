@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gdou.HotelSystem.mapper.CommentMapper" >
+  <resultMap id="BaseResultMap" type="com.gdou.HotelSystem.Comment" >
+    <id column="comment_id" property="commentId" jdbcType="INTEGER" />
+    <result column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="comment_content" property="commentContent" jdbcType="VARCHAR" />
+    <result column="type_id" property="typeId" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="VARCHAR" />
+    <result column="is_removed" property="isRemoved" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    comment_id, user_id, comment_content, type_id, create_time, is_removed
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from hs_comments
+    where comment_id = #{commentId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from hs_comments
+    where comment_id = #{commentId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.gdou.HotelSystem.Comment" >
+    insert into hs_comments (comment_id, user_id, comment_content, 
+      type_id, create_time, is_removed
+      )
+    values (#{commentId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{commentContent,jdbcType=VARCHAR}, 
+      #{typeId,jdbcType=INTEGER}, #{createTime,jdbcType=VARCHAR}, #{isRemoved,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.gdou.HotelSystem.Comment" >
+    insert into hs_comments
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="commentId != null" >
+        comment_id,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="commentContent != null" >
+        comment_content,
+      </if>
+      <if test="typeId != null" >
+        type_id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="isRemoved != null" >
+        is_removed,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="commentId != null" >
+        #{commentId,jdbcType=INTEGER},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="commentContent != null" >
+        #{commentContent,jdbcType=VARCHAR},
+      </if>
+      <if test="typeId != null" >
+        #{typeId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="isRemoved != null" >
+        #{isRemoved,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gdou.HotelSystem.Comment" >
+    update hs_comments
+    <set >
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="commentContent != null" >
+        comment_content = #{commentContent,jdbcType=VARCHAR},
+      </if>
+      <if test="typeId != null" >
+        type_id = #{typeId,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="isRemoved != null" >
+        is_removed = #{isRemoved,jdbcType=INTEGER},
+      </if>
+    </set>
+    where comment_id = #{commentId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gdou.HotelSystem.Comment" >
+    update hs_comments
+    set user_id = #{userId,jdbcType=INTEGER},
+      comment_content = #{commentContent,jdbcType=VARCHAR},
+      type_id = #{typeId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=VARCHAR},
+      is_removed = #{isRemoved,jdbcType=INTEGER}
+    where comment_id = #{commentId,jdbcType=INTEGER}
+  </update>
+</mapper>

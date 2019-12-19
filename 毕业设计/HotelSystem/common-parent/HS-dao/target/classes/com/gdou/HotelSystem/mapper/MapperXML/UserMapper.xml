@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gdou.HotelSystem.mapper.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.gdou.HotelSystem.User" >
+    <id column="user_id" property="userId" jdbcType="INTEGER" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="idnumber" property="idnumber" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+    <result column="head_picture" property="headPicture" jdbcType="VARCHAR" />
+    <result column="id" property="id" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="VARCHAR" />
+    <result column="is_removed" property="isRemoved" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    user_id, username, idnumber, sex, head_picture, id, create_time, is_removed
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from hs_users
+    where user_id = #{userId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from hs_users
+    where user_id = #{userId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.gdou.HotelSystem.User"  keyColumn="user_id"  keyProperty="userId">
+    insert into hs_users (user_id, username, idnumber, 
+      sex, head_picture, id, 
+      create_time, is_removed)
+    values (#{userId,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{idnumber,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=VARCHAR}, #{headPicture,jdbcType=VARCHAR}, #{id,jdbcType=INTEGER}, 
+      #{createTime,jdbcType=VARCHAR}, #{isRemoved,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gdou.HotelSystem.User">
+    insert into hs_users
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="username != null" >
+        username,
+      </if>
+      <if test="idnumber != null" >
+        idnumber,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="headPicture != null" >
+        head_picture,
+      </if>
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="isRemoved != null" >
+        is_removed,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="idnumber != null" >
+        #{idnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="headPicture != null" >
+        #{headPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="isRemoved != null" >
+        #{isRemoved,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gdou.HotelSystem.User" >
+    update hs_users
+    <set >
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="idnumber != null" >
+        idnumber = #{idnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="headPicture != null" >
+        head_picture = #{headPicture,jdbcType=VARCHAR},
+      </if>
+      <if test="id != null" >
+        id = #{id,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="isRemoved != null" >
+        is_removed = #{isRemoved,jdbcType=INTEGER},
+      </if>
+    </set>
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gdou.HotelSystem.User" >
+    update hs_users
+    set username = #{username,jdbcType=VARCHAR},
+      idnumber = #{idnumber,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      head_picture = #{headPicture,jdbcType=VARCHAR},
+      id = #{id,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=VARCHAR},
+      is_removed = #{isRemoved,jdbcType=INTEGER}
+    where user_id = #{userId,jdbcType=INTEGER}
+  </update>
+</mapper>

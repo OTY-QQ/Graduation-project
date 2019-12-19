@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gdou.HotelSystem.mapper.RoleMapper" >
+  <resultMap id="BaseResultMap" type="com.gdou.HotelSystem.Role" >
+    <id column="role_id" property="roleId" jdbcType="INTEGER" />
+    <result column="role_name" property="roleName" jdbcType="INTEGER" />
+    <result column="create_time" property="createTime" jdbcType="VARCHAR" />
+    <result column="is_removed" property="isRemoved" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    role_id, role_name, create_time, is_removed
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from hs_roles
+    where role_id = #{roleId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from hs_roles
+    where role_id = #{roleId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.gdou.HotelSystem.Role" >
+    insert into hs_roles (role_id, role_name, create_time, 
+      is_removed)
+    values (#{roleId,jdbcType=INTEGER}, #{roleName,jdbcType=INTEGER}, #{createTime,jdbcType=VARCHAR}, 
+      #{isRemoved,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.gdou.HotelSystem.Role" >
+    insert into hs_roles
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="roleId != null" >
+        role_id,
+      </if>
+      <if test="roleName != null" >
+        role_name,
+      </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="isRemoved != null" >
+        is_removed,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="roleId != null" >
+        #{roleId,jdbcType=INTEGER},
+      </if>
+      <if test="roleName != null" >
+        #{roleName,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="isRemoved != null" >
+        #{isRemoved,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.gdou.HotelSystem.Role" >
+    update hs_roles
+    <set >
+      <if test="roleName != null" >
+        role_name = #{roleName,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=VARCHAR},
+      </if>
+      <if test="isRemoved != null" >
+        is_removed = #{isRemoved,jdbcType=INTEGER},
+      </if>
+    </set>
+    where role_id = #{roleId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.gdou.HotelSystem.Role" >
+    update hs_roles
+    set role_name = #{roleName,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=VARCHAR},
+      is_removed = #{isRemoved,jdbcType=INTEGER}
+    where role_id = #{roleId,jdbcType=INTEGER}
+  </update>
+</mapper>
